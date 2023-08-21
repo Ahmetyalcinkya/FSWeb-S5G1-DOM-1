@@ -54,8 +54,7 @@ const navKeys = Object.keys(siteContent.nav);
 
 navLinks.forEach((link, index) => {
   let linkKey = navKeys[index];
-  link.setAttribute("class", linkKey);
-  // link.computedStyleMap.fontStyle = italic;
+  link.setAttribute("class", "italic", linkKey);
   link.textContent = siteContent.nav[linkKey];
 });
 
@@ -124,3 +123,4 @@ contactP3.textContent = siteContent.iletisim.email;
 
 const footer = document.querySelector("footer a");
 footer.textContent = siteContent.footer.copyright;
+footer.classList.add("bold");
